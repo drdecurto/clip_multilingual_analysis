@@ -1,0 +1,94 @@
+==============================================================================
+DENSE-CLIP MULTILINGUAL GROUNDING — STATISTICAL REPORT
+==============================================================================
+
+Frozen subset: 210 BDD100K images
+Languages    : 13 (3 low-resource: ar, eu, lb)
+Concepts     : 11 BDD100K-relevant nouns
+Reference    : English (en)
+Paired obs.  : 13 langs × 11 concepts × 210 images = 30,030 records
+               (2,310 per non-EN language)
+
+------------------------------------------------------------------------------
+BACKBONE  : XLM-R base + ViT-B/32
+           (dense_clip_xlmr_base)
+------------------------------------------------------------------------------
+Energy    : 3.868 Wh per 1,000 queries
+            98.9 W avg, 116.15 Wh total over 4227 s
+
+Per-language IoU (mean cluster-mask IoU vs EN, n=2310 each):
+  Spanish            (es   ): IoU = 0.6535, Spearman = 0.9121, peak ratio = 0.9680
+  French             (fr   ): IoU = 0.6450, Spearman = 0.8997, peak ratio = 0.9656
+  Italian            (it   ): IoU = 0.6517, Spearman = 0.9090, peak ratio = 0.9535
+  Portuguese         (pt   ): IoU = 0.6476, Spearman = 0.9036, peak ratio = 0.9925
+  Catalan            (ca   ): IoU = 0.6253, Spearman = 0.8899, peak ratio = 0.9416
+  German             (de   ): IoU = 0.6357, Spearman = 0.8966, peak ratio = 0.9719
+  Luxembourgish      (lb   ) [LR]: IoU = 0.4640, Spearman = 0.6673, peak ratio = 0.9309
+  Russian            (ru   ): IoU = 0.5552, Spearman = 0.8224, peak ratio = 0.9684
+  Arabic             (ar   ) [LR]: IoU = 0.5300, Spearman = 0.7970, peak ratio = 1.0729
+  Basque             (eu   ) [LR]: IoU = 0.4994, Spearman = 0.7177, peak ratio = 0.9286
+  Chinese (Simp.)    (zh-CN): IoU = 0.5334, Spearman = 0.8138, peak ratio = 1.0518
+  Chinese (Trad.)    (zh-TW): IoU = 0.5630, Spearman = 0.8390, peak ratio = 1.0280
+
+HR mean IoU: 0.6123 (n=9 languages)
+LR mean IoU: 0.4978 (n=3 languages)
+HR − LR gap: +0.1145
+
+Statistical tests (paired by image × concept):
+  iou_cluster_mask                Friedman χ²=8065.8 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1145 (p=<1e-300)
+  iou_pct_95                      Friedman χ²=5326.5 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1254 (p=3.64e-278)
+  spearman                        Friedman χ²=11803.1 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1489 (p=<1e-300)
+  peak_lang                       Friedman χ²=7794.4 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.0018 (p=4.72e-02)
+  peak_ratio_lang_over_ref        Friedman χ²=7794.4 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.0049 (p=9.79e-02)
+
+------------------------------------------------------------------------------
+BACKBONE  : XLM-R large + ViT-H/14
+           (dense_clip_xlmr_large)
+------------------------------------------------------------------------------
+Energy    : 3.358 Wh per 1,000 queries
+            99.3 W avg, 100.85 Wh total over 3657 s
+
+Per-language IoU (mean cluster-mask IoU vs EN, n=2310 each):
+  Spanish            (es   ): IoU = 0.6512, Spearman = 0.9187, peak ratio = 0.9644
+  French             (fr   ): IoU = 0.6237, Spearman = 0.9060, peak ratio = 0.9327
+  Italian            (it   ): IoU = 0.6152, Spearman = 0.8954, peak ratio = 0.9448
+  Portuguese         (pt   ): IoU = 0.6270, Spearman = 0.9062, peak ratio = 0.9522
+  Catalan            (ca   ): IoU = 0.6102, Spearman = 0.8845, peak ratio = 0.9503
+  German             (de   ): IoU = 0.6210, Spearman = 0.9056, peak ratio = 0.9197
+  Luxembourgish      (lb   ) [LR]: IoU = 0.3875, Spearman = 0.5769, peak ratio = 0.8742
+  Russian            (ru   ): IoU = 0.5731, Spearman = 0.8626, peak ratio = 0.9185
+  Arabic             (ar   ) [LR]: IoU = 0.5628, Spearman = 0.8556, peak ratio = 0.9368
+  Basque             (eu   ) [LR]: IoU = 0.4438, Spearman = 0.6508, peak ratio = 0.9154
+  Chinese (Simp.)    (zh-CN): IoU = 0.5728, Spearman = 0.8725, peak ratio = 0.9689
+  Chinese (Trad.)    (zh-TW): IoU = 0.5739, Spearman = 0.8606, peak ratio = 0.9612
+
+HR mean IoU: 0.6076 (n=9 languages)
+LR mean IoU: 0.4647 (n=3 languages)
+HR − LR gap: +0.1428
+
+Statistical tests (paired by image × concept):
+  iou_cluster_mask                Friedman χ²=9478.4 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1428 (p=<1e-300)
+  iou_pct_95                      Friedman χ²=7894.7 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1700 (p=<1e-300)
+  spearman                        Friedman χ²=11152.1 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.1958 (p=<1e-300)
+  peak_lang                       Friedman χ²=3046.2 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.0075 (p=2.18e-124)
+  peak_ratio_lang_over_ref        Friedman χ²=3046.2 (p=<1e-300, n=2310)  |  Wilcoxon HR>LR Δ=+0.0370 (p=5.30e-111)
+
+------------------------------------------------------------------------------
+SCALE EFFECT: Δ IoU = IoU(large) − IoU(base)  per language
+------------------------------------------------------------------------------
+  Spanish            (es   ): base=0.6535, large=0.6512, Δ=-0.0023
+  French             (fr   ): base=0.6450, large=0.6237, Δ=-0.0213
+  Italian            (it   ): base=0.6517, large=0.6152, Δ=-0.0365
+  Portuguese         (pt   ): base=0.6476, large=0.6270, Δ=-0.0206
+  Catalan            (ca   ): base=0.6253, large=0.6102, Δ=-0.0151
+  German             (de   ): base=0.6357, large=0.6210, Δ=-0.0147
+  Luxembourgish      (lb   ) [LR]: base=0.4640, large=0.3875, Δ=-0.0764
+  Russian            (ru   ): base=0.5552, large=0.5731, Δ=+0.0179
+  Arabic             (ar   ) [LR]: base=0.5300, large=0.5628, Δ=+0.0328
+  Basque             (eu   ) [LR]: base=0.4994, large=0.4438, Δ=-0.0555
+  Chinese (Simp.)    (zh-CN): base=0.5334, large=0.5728, Δ=+0.0394
+  Chinese (Trad.)    (zh-TW): base=0.5630, large=0.5739, Δ=+0.0109
+
+Headline: low-resource languages show a NEGATIVE Δ IoU on average (mean Δ = -0.0331), while high-resource languages show a small positive or near-zero shift (mean Δ = -0.0047). Scaling the multilingual encoder does not close the gap — it widens it for the structural failure cases (Basque, Luxembourgish).
+
+==============================================================================

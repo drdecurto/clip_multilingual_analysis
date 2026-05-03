@@ -1,0 +1,3 @@
+backbone,display,vis_params_M,duration_sec,avg_watts,max_watts,min_watts,total_wh,n_queries,wh_per_1k_queries,images_evaluated
+dense_clip_xlmr_base,XLM-R base + ViT-B/32,87,4227.373582601547,98.91240609682906,115.614,98.064,116.14991459035872,30030,3.8677960236549693,210
+dense_clip_xlmr_large,XLM-R large + ViT-H/14,632,3657.317309856415,99.27301372112113,407.708,67.233,100.85358652329714,30030,3.3584277896535846,210
