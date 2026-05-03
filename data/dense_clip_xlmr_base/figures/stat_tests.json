@@ -1,0 +1,118 @@
+{
+  "iou_cluster_mask": {
+    "metric": "iou_cluster_mask",
+    "n_paired_observations": 2310,
+    "friedman": {
+      "statistic": 8065.775514016981,
+      "p_value": 0.0
+    },
+    "wilcoxon_hr_vs_lr": {
+      "alternative": "HR > LR",
+      "mean_diff": 0.11446516944312893,
+      "median_diff": 0.10755582996762042,
+      "statistic": 2590138.0,
+      "p_value": 0.0
+    },
+    "per_low_resource_vs_hr_pool": {
+      "ar": {
+        "statistic": 32612437.0,
+        "p_value": 2.7240576190209628e-176
+      },
+      "eu": {
+        "statistic": 33579921.5,
+        "p_value": 1.275038050362184e-217
+      },
+      "lb": {
+        "statistic": 35681893.0,
+        "p_value": 0.0
+      }
+    }
+  },
+  "iou_pct_95": {
+    "metric": "iou_pct_95",
+    "n_paired_observations": 2310,
+    "friedman": {
+      "statistic": 5326.454569351272,
+      "p_value": 0.0
+    },
+    "wilcoxon_hr_vs_lr": {
+      "alternative": "HR > LR",
+      "mean_diff": 0.12541560662422355,
+      "median_diff": 0.12025690698794997,
+      "statistic": 2476541.0,
+      "p_value": 3.6360957365248924e-278
+    },
+    "per_low_resource_vs_hr_pool": {
+      "ar": {
+        "statistic": 30609855.0,
+        "p_value": 1.0767585104350816e-104
+      },
+      "eu": {
+        "statistic": 31778876.0,
+        "p_value": 3.326936469259215e-144
+      },
+      "lb": {
+        "statistic": 34828296.0,
+        "p_value": 1.9303102217842457e-277
+      }
+    }
+  },
+  "spearman": {
+    "metric": "spearman",
+    "n_paired_observations": 2310,
+    "friedman": {
+      "statistic": 11803.081436925648,
+      "p_value": 0.0
+    },
+    "wilcoxon_hr_vs_lr": {
+      "alternative": "HR > LR",
+      "mean_diff": 0.14888456401272862,
+      "median_diff": 0.11343129921905776,
+      "statistic": 2640785.0,
+      "p_value": 0.0
+    },
+    "per_low_resource_vs_hr_pool": {
+      "ar": {
+        "statistic": 35046848.0,
+        "p_value": 1.1504181947728154e-288
+      },
+      "eu": {
+        "statistic": 35609315.0,
+        "p_value": 0.0
+      },
+      "lb": {
+        "statistic": 38136491.0,
+        "p_value": 0.0
+      }
+    }
+  },
+  "peak_lang": {
+    "metric": "peak_lang",
+    "n_paired_observations": 2310,
+    "friedman": {
+      "statistic": 7794.448989139517,
+      "p_value": 0.0
+    },
+    "wilcoxon_hr_vs_lr": {
+      "alternative": "HR > LR",
+      "mean_diff": 0.0018046801184994376,
+      "median_diff": -0.00032207452588611796,
+      "statistic": 1388241.5,
+      "p_value": 0.04715742759978422
+    },
+    "per_low_resource_vs_hr_pool": {
+      "ar": {
+        "statistic": 14234899.5,
+        "p_value": 1.0
+      },
+      "eu": {
+        "statistic": 31587570.5,
+        "p_value": 2.6686828876573087e-137
+      },
+      "lb": {
+        "statistic": 29941899.5,
+        "p_value": 5.385416817311942e-85
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "iou_cluster_mask": {
+    "metric": "iou_cluster_mask",
+    "mean_high_resource": 0.6122560463570669,
+    "mean_low_resource": 0.4977908769139381,
+    "hr_minus_lr": 0.11446516944312879,
+    "n_hr_langs": 9,
+    "n_lr_langs": 3
+  },
+  "iou_pct_95": {
+    "metric": "iou_pct_95",
+    "mean_high_resource": 0.4426592994012817,
+    "mean_low_resource": 0.31724369277705805,
+    "hr_minus_lr": 0.12541560662422363,
+    "n_hr_langs": 9,
+    "n_lr_langs": 3
+  },
+  "spearman": {
+    "metric": "spearman",
+    "mean_high_resource": 0.8762370329386789,
+    "mean_low_resource": 0.7273524689259502,
+    "hr_minus_lr": 0.14888456401272876,
+    "n_hr_langs": 9,
+    "n_lr_langs": 3
+  },
+  "peak_lang": {
+    "metric": "peak_lang",
+    "mean_high_resource": 0.19745110794077592,
+    "mean_low_resource": 0.19564642782227648,
+    "hr_minus_lr": 0.0018046801184994354,
+    "n_hr_langs": 9,
+    "n_lr_langs": 3
+  }
+}

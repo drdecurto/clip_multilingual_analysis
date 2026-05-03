@@ -1,0 +1,40 @@
+{
+  "enabled": true,
+  "samples_valid": 39988,
+  "duration_sec": 4227.373582601547,
+  "avg_watts": 98.91240609682906,
+  "max_watts": 115.614,
+  "min_watts": 98.064,
+  "total_wh": 116.14991459035872,
+  "n_queries": 30030,
+  "wh_per_1k_queries": 3.8677960236549693,
+  "images_evaluated": 210,
+  "languages": [
+    "ar",
+    "ca",
+    "de",
+    "en",
+    "es",
+    "eu",
+    "fr",
+    "it",
+    "lb",
+    "pt",
+    "ru",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "concepts": [
+    "car",
+    "truck",
+    "bus",
+    "person",
+    "pedestrian",
+    "traffic_light",
+    "traffic_sign",
+    "bicycle",
+    "motorcycle",
+    "road",
+    "building"
+  ]
+}

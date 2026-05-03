@@ -1,0 +1,49 @@
+{
+  "frozen_json": "BDD100K_2000_samples_v1.json",
+  "n_images": 210,
+  "concepts": [
+    "car",
+    "truck",
+    "bus",
+    "person",
+    "pedestrian",
+    "traffic_light",
+    "traffic_sign",
+    "bicycle",
+    "motorcycle",
+    "road",
+    "building"
+  ],
+  "languages": [
+    "ar",
+    "ca",
+    "de",
+    "en",
+    "es",
+    "eu",
+    "fr",
+    "it",
+    "lb",
+    "pt",
+    "ru",
+    "zh-CN",
+    "zh-TW"
+  ],
+  "template": "indef",
+  "model": "xlm-roberta-large-ViT-H-14",
+  "pretrained": "frozen_laion5b_s13b_b90k",
+  "precision": "fp32",
+  "cluster": {
+    "neighborhood_size": 10,
+    "min_cluster_size": 3,
+    "relative_threshold": 0.8
+  },
+  "cluster_percentile_mask": 75.0,
+  "upsample_hw": [
+    224,
+    224
+  ],
+  "reference_language": "en",
+  "device": "cuda",
+  "torch_version": "2.11.0+cu130"
+}
